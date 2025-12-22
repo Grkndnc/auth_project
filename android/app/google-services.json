@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "944241438394",
+    "project_id": "authproject-cc9c4",
+    "storage_bucket": "authproject-cc9c4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944241438394:android:55ccb5d3bfe6a86bf3dc83",
+        "android_client_info": {
+          "package_name": "com.example.auth_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGuFPnOKNSyozU44WILhSNxu0M_kyFV08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
