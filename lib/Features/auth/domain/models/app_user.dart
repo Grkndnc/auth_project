@@ -1,8 +1,9 @@
 class AppUser {
+  final String? name;
   final String uid;
   final String email;
 
-  AppUser({required this.uid, required this.email});
+  AppUser({required this.uid, required this.email, this.name});
 
   // convert app  user to json
 

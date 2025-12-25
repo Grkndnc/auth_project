@@ -1,6 +1,7 @@
 //
 
 //
+
 import 'package:auth_project/Features/auth/domain/models/app_user.dart';
 
 abstract class AuthRepo {

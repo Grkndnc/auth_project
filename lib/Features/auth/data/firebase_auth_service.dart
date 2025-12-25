@@ -1,6 +1,6 @@
-import 'package:auth_project/Features/auth/domain/models/app_user.dart';
 import 'package:auth_project/Features/auth/domain/repository/auth_repo.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:auth_project/Features/auth/domain/models/app_user.dart';
 
 class FirebaseAuthService implements AuthRepo {
   final FirebaseAuth _auth = FirebaseAuth.instance;
