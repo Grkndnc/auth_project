@@ -1,6 +1,8 @@
+import 'package:auth_project/Features/auth/presentation/cubits/auth_cubit.dart';
 import 'package:auth_project/Features/auth/presentation/widgets/my_button.dart';
 import 'package:auth_project/Features/auth/presentation/widgets/my_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginPage extends StatefulWidget {
   final void Function()? togglePages;
@@ -13,6 +15,22 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final emailcontroller = TextEditingController();
   final pwcontroller = TextEditingController();
+
+  // sign in button pressed
+  void signIn() {
+    final email = emailcontroller.text.trim();
+    final pw = pwcontroller.text.trim();
+    // AuthCubit
+    final authCubit = context.read<AuthCubit>();
+    authCubit.signIn(email, pw);
+  }
+
+  @override
+  void dispose() {
+    emailcontroller.dispose();
+    pwcontroller.dispose();
+    super.dispose();
+  }
 
   @override
   void initState() {
@@ -79,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
 
             Padding(
               padding: const EdgeInsets.all(24.0),
-              child: MyButton(onTap: () {}, text: "LOGIN"),
+              child: MyButton(onTap: signIn, text: "LOGIN"),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

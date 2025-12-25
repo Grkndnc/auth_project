@@ -29,7 +29,6 @@ class _RegisterPageState extends State<RegisterPage> {
 
   // register button pressed
   void register() {
-    print("TIKLANDI");
     final name = namecontroller.text.trim();
     final email = emailcontroller.text.trim();
     final password = passwordcontroller.text.trim();
@@ -56,6 +55,9 @@ class _RegisterPageState extends State<RegisterPage> {
       );
     }
   }
+
+  // forgotpassword pressed
+  void forgotPassword() {}
 
   @override
   void dispose() {
@@ -104,13 +106,13 @@ class _RegisterPageState extends State<RegisterPage> {
             MyTextField(
               controller: passwordcontroller,
               hintText: "Password",
-              obscureText: false,
+              obscureText: true,
             ),
             SizedBox(height: 12),
             MyTextField(
               controller: confirmpasswordcontroller,
               hintText: " Confirm Password",
-              obscureText: false,
+              obscureText: true,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(
